@@ -576,29 +576,19 @@ var confetti = {
 const start = () => {
     setTimeout(function () {
         confetti.start();
-    }, 4000);
+    }, 4500);
 };
 
 const stop = () => {
     setTimeout(function () {
         confetti.stop();
-    }, 10000);
+    }, 13000);
 };
 
 var userAgent = navigator.userAgent.toLowerCase();
 
 if (/mobile/i.test(userAgent)) {
-    document.addEventListener(
-        'touchmove',
-        function (event) {
-            event.preventDefault(); // Ngăn cuộn trang
-        },
-        { passive: false }
-    );
-
-    // Nếu là thiết bị di động
     document.body.style.display = 'flex';
-
     anim();
     start();
     stop();
