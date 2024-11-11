@@ -453,7 +453,7 @@ var confetti = {
             canvas.setAttribute('id', 'confetti-canvas');
             canvas.setAttribute(
                 'style',
-                'display:block;z-index:999999;pointer-events:none;position:fixed;top:0'
+                'display:block;z-index:99;pointer-events:none;position:fixed;top:0'
             );
             document.body.prepend(canvas);
             canvas.width = width;
@@ -576,7 +576,7 @@ var confetti = {
 const start = () => {
     setTimeout(function () {
         confetti.start();
-    }, 4500);
+    }, 5000);
 };
 
 const stop = () => {
@@ -593,6 +593,5 @@ if (/mobile/i.test(userAgent)) {
     start();
     stop();
 } else {
-    // Nếu là máy tính
     document.body.style.display = 'none';
 }
