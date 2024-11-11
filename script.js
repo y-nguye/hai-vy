@@ -576,30 +576,30 @@ var confetti = {
 const start = () => {
     setTimeout(function () {
         confetti.start();
-    }, 3000);
+    }, 4000);
 };
 
 const stop = () => {
     setTimeout(function () {
         confetti.stop();
-    }, 8000);
+    }, 10000);
 };
 
 var userAgent = navigator.userAgent.toLowerCase();
 
 if (/mobile/i.test(userAgent)) {
+    document.addEventListener(
+        'touchmove',
+        function (event) {
+            event.preventDefault(); // Ngăn cuộn trang
+        },
+        { passive: false }
+    );
+
     // Nếu là thiết bị di động
     document.body.style.display = 'flex';
 
     anim();
-
-    onload = () => {
-        const c = setTimeout(() => {
-            document.body.classList.remove('not-loaded');
-            clearTimeout(c);
-        }, 1000);
-    };
-
     start();
     stop();
 } else {

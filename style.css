@@ -20,7 +20,7 @@ canvas {
 body {
     align-items: flex-end;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: var(--dark-color);
     overflow: hidden;
     perspective: 1000px;
@@ -35,7 +35,6 @@ body {
     position: absolute;
     bottom: 10vmin;
     transform-origin: bottom center;
-    /* z-index: 10; */
     --fl-speed: 0.8s;
 }
 .flower--1 {
