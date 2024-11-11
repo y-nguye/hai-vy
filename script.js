@@ -326,9 +326,9 @@ window.addEventListener('resize', function () {
 // confetti
 
 var confetti = {
-    maxCount: 150, //set max confetti count
+    maxCount: 100, //set max confetti count
     speed: 2, //set the particle animation speed
-    frameInterval: 15, //the confetti animation frame interval in milliseconds
+    frameInterval: 20, //the confetti animation frame interval in milliseconds
     alpha: 1.0, //the alpha opacity of the confetti (between 0 and 1, where 1 is opaque and 0 is invisible)
     gradient: false, //whether to use gradients for the confetti particles
     start: null, //call to start confetti animation (with optional timeout in milliseconds, and optional min and max random confetti count)
@@ -576,13 +576,13 @@ var confetti = {
 const start = () => {
     setTimeout(function () {
         confetti.start();
-    }, 6000);
+    }, 5000);
 };
 
 const stop = () => {
     setTimeout(function () {
         confetti.stop();
-    }, 14000);
+    }, 13000);
 };
 
 var userAgent = navigator.userAgent.toLowerCase();
