@@ -576,13 +576,13 @@ var confetti = {
 const start = () => {
     setTimeout(function () {
         confetti.start();
-    }, 5000);
+    }, 6000);
 };
 
 const stop = () => {
     setTimeout(function () {
         confetti.stop();
-    }, 13000);
+    }, 14000);
 };
 
 var userAgent = navigator.userAgent.toLowerCase();
